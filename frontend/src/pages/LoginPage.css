@@ -1,0 +1,160 @@
+/* LoginPage.css - two-column sign in / sign up card */
+
+:root{
+  --card-bg: #fff;
+  --gold: #f2942f; /* change if you prefer different orange */
+  --muted: #bfbfbf;
+  --text: #111;
+}
+
+* { box-sizing: border-box; }
+body { margin:0; font-family: Inter, Arial, sans-serif; }
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f6f6;
+  padding: 40px 20px;
+}
+
+/* big card */
+.login-card {
+  width: 920px;
+  max-width: calc(100% - 40px);
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* Left column (sign in) */
+.login-left {
+  padding: 48px 54px;
+}
+.signin-title {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin: 0 0 26px 0;
+  color: var(--text);
+}
+
+/* form fields */
+.signin-form .input {
+  width: 100%;
+  padding: 14px 14px;
+  margin-bottom: 16px;
+  border: 1px solid #eee;
+  background: #f3f3f3;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+.signin-form .input:focus {
+  border-color: rgba(0,0,0,0.12);
+  background: #fff;
+}
+
+/* password + eye button */
+.password-wrap {
+  position: relative;
+}
+.eye-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* links area below inputs */
+.form-links {
+  margin: 8px 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.link-muted {
+  color: #666;
+  text-decoration: none;
+  font-size: 13px;
+}
+.small-muted {
+  color: #9a9a9a;
+  font-size: 13px;
+}
+
+/* primary sign in button */
+.primary-btn {
+  background: var(--gold);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 26px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 6px;
+}
+.primary-btn:hover { filter: brightness(0.98); }
+
+/* Right column (signup promo) */
+.login-right {
+  background: linear-gradient(180deg, rgba(242,148,47,1) 0%, rgba(243,131,34,1) 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 38px;
+}
+.right-inner {
+  text-align: center;
+  max-width: 300px;
+}
+.welcome-title {
+  margin: 0 0 6px;
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+.welcome-desc {
+  margin: 0 0 18px;
+  color: rgba(255,255,255,0.95);
+  font-size: 14px;
+}
+.muted-cta {
+  display:inline-block;
+  background: #fff;
+  color: var(--gold);
+  padding: 10px 28px;
+  border-radius: 26px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* accessibility helper */
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px,1px,1px,1px);
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .login-card { grid-template-columns: 1fr; width: 680px; }
+  .login-right { order: -1; padding: 28px; }
+  .right-inner { max-width: none; }
+}
+
+@media (max-width: 480px) {
+  .login-card { width: 100%; }
+  .login-left { padding: 28px 18px; }
+  .signin-title { font-size: 24px; }
+}

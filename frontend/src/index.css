@@ -1,0 +1,15 @@
+/* src/index.css - required for Tailwind to apply */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts (optional but match your design) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600&display=swap');
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #111;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

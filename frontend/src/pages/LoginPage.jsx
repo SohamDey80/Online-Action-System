@@ -16,7 +16,7 @@ export default function AuthPage() {
     setIsSignUp(location.pathname === "/signup");
   }, [location.pathname]);
 
-  // helpers that update both UI and URL
+  // for sign in and sign up
   function goToSignIn() {
     navigate("/login", { replace: false });
     setIsSignUp(false);
@@ -119,4 +119,5 @@ export default function AuthPage() {
     </div>
   );
 }
+
 

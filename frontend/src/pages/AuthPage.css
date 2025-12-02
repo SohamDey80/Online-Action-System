@@ -1,8 +1,3 @@
-/* src/pages/AuthPage.css
-   Final adjustments: Sign in panel styling (centered heading, stacked full-width inputs,
-   password eye inside, helper links, centered rounded CTA).
-*/
-
 :root{
   --orange-1: #ffaa4f;
   --orange-2: #e4840e;
@@ -263,3 +258,4 @@
   opacity: 0 !important;
   pointer-events: none !important;
 }
+

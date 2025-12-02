@@ -1,4 +1,3 @@
-// src/pages/AuthPage.jsx
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./AuthPage.css";
@@ -123,3 +122,4 @@ export default function AuthPage() {
     </div>
   );
 }
+

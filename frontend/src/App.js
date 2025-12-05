@@ -8,42 +8,38 @@ import UpcomingSection from "./components/UpcomingSection";
 import Departments from "./pages/Departments";
 import AuthPage from "./pages/AuthPage";
 
+import LiveAuctions from "./pages/Auctions/LiveAuctions";
+import UpcomingAuctions from "./pages/Auctions/UpcomingAuctions";
+import PastAuctions from "./pages/Auctions/PastAuctions"; // <- use PastAuctions
+
 function App() {
   return (
     <>
       <Header />
 
-      <main>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <HeroSlider />
-                <UpcomingSection />
-              </>
-            }
-          />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <HeroSlider />
+              <UpcomingSection />
+            </>
+          }
+        />
 
-          {/* Department page */}
-          <Route path="/departments" element={<Departments />} />
+        {/* Departments */}
+        <Route path="/departments" element={<Departments />} />
 
-          {/* Auth (login / signup share the same page component) */}
-          <Route path="/login" element={<AuthPage />} />
-          <Route path="/signup" element={<AuthPage />} />
+        {/* Auctions tabs */}
+        <Route path="/live" element={<LiveAuctions />} />
+        <Route path="/upcoming" element={<UpcomingAuctions />} />
+        <Route path="/results" element={<PastAuctions />} />
 
-          {/* optional: fallback route */}
-          <Route
-            path="*"
-            element={
-              <>
-                <HeroSlider />
-                <UpcomingSection />
-              </>
-            }
-          />
-        </Routes>
-      </main>
+        {/* Auth */}
+        <Route path="/login" element={<AuthPage />} />
+        <Route path="/signup" element={<AuthPage />} />
+      </Routes>
 
       <Footer />
     </>

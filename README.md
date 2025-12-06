@@ -11,4 +11,4 @@
 - Frontend: HTML, CSS, React
 - Backend: Java Servlets
 - Server: Apache Tomcat
-- Database: MongoDB
+- Database: MongoDB/MySQL
